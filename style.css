@@ -1,0 +1,121 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.5; 
+  height: 100%;
+  //background: linear-gradient(45deg, rgb(125,0,255,0.15), rgb(255,0,125,0.15)) fixed;
+  background: rgb(200,0,255,0.1);
+}
+
+main, #credits {
+  margin: auto;
+  max-width: 90%;
+  width: 1000px;
+}
+
+footer {
+  max-width: 100%;
+  position: relative;
+  //bottom: -30px;
+}
+
+nav { 
+  background: purple;
+  height: 50px; 
+  width: 100%;
+}
+
+nav ul {
+  height: 50px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 1000px;
+  max-width: 90%;
+}
+
+nav ul li {
+  color: #fff;
+  display: inline-block;
+  line-height: 50px;
+  transition: background .5s;
+}
+
+nav ul li:hover {
+  //background: #117bff;
+  background: rgb(50,25,50,0.5);
+  //cursor: pointer;
+  //transition: background .5s;
+}
+
+nav a {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: 0 10px;
+}
+
+.bullet {
+  line-height: 2;
+}
+
+.bullet span {
+  font-weight: 500;
+  color: purple;
+}
+
+h1 {
+  color: purple;
+}
+
+code {
+  font-family: "Consolas";
+  color: purple;
+}
+
+nav a:link, 
+nav a:visited, 
+nav a:focus, 
+nav a:hover, 
+nav a:active {
+  color: #FFF;
+}
+
+table {
+  border-collapse: collapse;
+  width: auto;
+}
+
+table td {
+  border: 1px solid purple;
+  padding: 10px;
+  vertical-align: top;
+}
+
+table table {
+  line-height: 1.2;
+  font-size: 14px;
+  background: rgb(125,0,125,0.1);
+}
+
+thead {
+  background: purple;
+  color: white;
+  //font-weight: normal;
+}
+
+#open, #close {
+  white-space: nowrap;
+}
+
+#credits, #credits a {
+  font-size: 12px;
+  font-style: italic;
+  color: gray;
+  padding: 20px 0 100px;
+}

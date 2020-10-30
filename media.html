@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <title>Semantic HTML - Media Tags</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="structural.html">Structural tags</a></li>
+        <li><a href="media.html">Media tags</a></li>
+      </ul>
+    </nav>
+    <!-- Main Content -->
+    <main>
+      <br>
+      <!-- Title -->
+      <h1>Media Tags</h1>
+      <p>Media tags have various attributes that affect playback.</p>
+      <br>
+      <!-- Example Tags -->
+      <table>
+        <!-- Header Row -->
+        <thead>
+          <td width="15%" id="open">Opening Tag</td>
+          <td width="15%" id="close">Closing Tag</td>
+          <td>Description</td>
+          <td>Attributes</td>
+          <td>Description</td>
+        </thead>
+        <!-- <audio> tag -->
+        <tr>
+          <td rowspan="5"><code>&lt;audio&gt;</code></td>
+          <td rowspan="5"><code>&lt;/audio&gt;</code></td>
+          <td rowspan="5">Used to embed audio content into a document.</td>
+          <!-- <audio>: src attribute -->
+          <td><code>src="audio.mp3"</code></td>
+          <td><code>src</code> attribute, used to link the audio source.</td>
+        </tr>
+        <!-- <audio>: type attribute -->
+        <tr>
+          <td><code>type="audio/mp3"</code></td>
+          <td><code>audio</code> attribute, used to name what kind of audio (not always necessary, but recommended: can help browser identify if file type is supported by browser)</td>
+        </tr>
+        <!-- <audio>: controls attribute -->
+        <tr>
+          <td><code>controls</code></td>
+          <td><code>controls</code> attribute, automatically displays audio controls into the browser, such as play and mute</td>
+        </tr>
+        <!-- <audio>: autoplay attribute -->
+        <tr>
+          <td><code>autoplay</code></td>
+          <td><code>autoplay</code> attribute, adds autoplay functionality</td>
+        </tr>
+        <!-- <audio>: other attributes -->
+        <tr>
+          <td>Other useful <code>&lt;audio&gt;</code> attributes:</td>
+          <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#Attributes">MDN Docs</a></td>
+        </tr>
+        <!-- <source> tag -->
+        <tr>
+          <td rowspan="2"><code>&lt;source&gt;</code></td>
+          <td rowspan="2">(self-closing)</td>
+          <td rowspan="2">Used to indicate the source of a media file separately from (inside) the media (<code>&lt;audio&gt;</code>, <code>&lt;img&gt;</code>, etc.) tag.<br><br>
+            &#128681; Why use a separate tag?<br><br>
+            The <code>&lt;audio&gt;</code> tag can be used in the same way as the <code>&lt;video&gt;</code> tag:<br><br>
+            <table>
+              <tr>
+                <td><code>&lt;audio<br>&nbsp;&nbsp;controls<br>&nbsp;&nbsp;src="/media/examples/t-rex-roar.mp3"&gt;Your browser does not support the &lt;code&gt;audio&lt;/code&gt; element.<br>&lt;/audio&gt;</code></td>
+              </tr>
+            </table><br>
+            However, not all browsers support the same file types, so you might want to use multiple sources as backup:<br><br>
+            <table>
+              <tr>
+                <td><code>&lt;audio controls&gt;<br>
+                &nbsp;&nbsp;&lt;source src="myAudio.mp3" type="audio/mpeg"&gt;<br>
+                &nbsp;&nbsp;&lt;source src="myAudio.ogg" type="audio/ogg"&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;Your browser doesn't support HTML5 audio. Here is a &lt;a href="myAudio.mp4"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;<br>
+                &lt;/audio&gt;</code></td>
+              </tr>
+            </table>
+          </td>
+          <!-- <source>: src attribute -->
+          <td><code>src="myAudio.mp3"</code><br>
+              <code>src="myAudio.ogg"</code></td>
+          <td>Indicate media source.</td>
+        </tr>
+        <!-- <source>: type attribute -->
+        <tr>
+          <td><code>type="audio/mpeg"</code><br>
+              <code>type="audio/ogg"</code></td>
+          <td>Indicate file type.</td>
+        </tr>
+        <!-- <video> tag -->
+        <tr>
+          <td rowspan="3"><code>&lt;video&gt;</code></td>
+          <td rowspan="3"><code>&lt;/video&gt;</code></td>
+          <td rowspan="3">Adds a video.<br><br>
+            &#128681; Text in between is displayed if video is not supported.<br><br>
+            <code>&lt;video src="coding.mp4"&gt;<em>Video not supported</em>&lt;/video&gt;</code>
+          </td>
+          <!-- <video>: controls attribute -->
+          <td><code>controls</code></td>
+          <td><code>controls</code> attribute, adds a play/pause button to the video along with volume control and a fullscreen option.</td>
+        </tr>
+        <!-- <video>: autoplay attribute -->
+        <tr>
+          <td><code>autoplay</code></td>
+          <td><code>autoplay</code> attribute, adds autoplay functionality.</td>
+        </tr>
+        <!-- <video>: loop attribute -->
+        <tr>
+          <td><code>loop</code></td>
+          <td><code>loop</code> attribute, makes the video play continuously on repeat.</td>
+        </tr>
+        <!-- <embed> tag -->
+        <tr>
+          <td><code>&lt;embed&gt;</code></td>
+          <td>(self-closing)</td>
+          <td>Can embed any media content including video, audio, gifs, etc. from an external source.<br><br>&#128681; Deprecated.</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <br>
+    </main>
+    <!-- Credits -->
+    <footer>
+      <p id="credits">Created as part of a <a href="http://www.codecademy.com/">Codecademy</a> project<br>by Charles Cheng, 2020</p>
+    </footer>
+  </body>
+
+</html>
